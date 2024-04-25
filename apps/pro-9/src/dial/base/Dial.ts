@@ -16,10 +16,11 @@ import {
   ValidateNested,
   IsOptional,
   IsString,
-  IsInt,
+  IsEnum,
 } from "class-validator";
 import { Type } from "class-transformer";
 import { Employee } from "../../employee/base/Employee";
+import { EnumDialKind } from "./EnumDialKind";
 
 @ObjectType()
 class Dial {
@@ -50,11 +51,18 @@ class Dial {
 
   @ApiProperty({
     required: true,
-    type: Number,
+    enum: EnumDialKind,
   })
-  @IsInt()
-  @Field(() => Number)
-  phone!: number;
+  @IsEnum(EnumDialKind)
+  @Field(() => EnumDialKind, {
+    nullable: true,
+  })
+  kind?:
+    | "TelephoneProfessionnel"
+    | "EmailPersonnel"
+    | "EmailProfessionnel"
+    | "TelephoneFix"
+    | "TelephoneMobile";
 
   @ApiProperty({
     required: true,
@@ -63,6 +71,14 @@ class Dial {
   @Type(() => Date)
   @Field(() => Date)
   updatedAt!: Date;
+
+  @ApiProperty({
+    required: true,
+    type: String,
+  })
+  @IsString()
+  @Field(() => String)
+  value!: string;
 }
 
 export { Dial as Dial };

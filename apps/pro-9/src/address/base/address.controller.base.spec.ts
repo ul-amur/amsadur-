@@ -18,25 +18,49 @@ import { AddressService } from "../address.service";
 const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
+  complement: "exampleComplement",
+  country: "exampleCountry",
   createdAt: new Date(),
   id: "exampleId",
+  inseeCog: "exampleInseeCog",
+  precision1: "examplePrecision1",
+  precision_2: "examplePrecision_2",
+  town: "exampleTown",
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
+  complement: "exampleComplement",
+  country: "exampleCountry",
   createdAt: new Date(),
   id: "exampleId",
+  inseeCog: "exampleInseeCog",
+  precision1: "examplePrecision1",
+  precision_2: "examplePrecision_2",
+  town: "exampleTown",
   updatedAt: new Date(),
 };
 const FIND_MANY_RESULT = [
   {
+    complement: "exampleComplement",
+    country: "exampleCountry",
     createdAt: new Date(),
     id: "exampleId",
+    inseeCog: "exampleInseeCog",
+    precision1: "examplePrecision1",
+    precision_2: "examplePrecision_2",
+    town: "exampleTown",
     updatedAt: new Date(),
   },
 ];
 const FIND_ONE_RESULT = {
+  complement: "exampleComplement",
+  country: "exampleCountry",
   createdAt: new Date(),
   id: "exampleId",
+  inseeCog: "exampleInseeCog",
+  precision1: "examplePrecision1",
+  precision_2: "examplePrecision_2",
+  town: "exampleTown",
   updatedAt: new Date(),
 };
 

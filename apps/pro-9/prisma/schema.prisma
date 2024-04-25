@@ -27,33 +27,49 @@ model Structure {
 }
 
 model Employee {
+  birthCountry  String?
+  birthDate     DateTime?
+  birthName     String?
+  birthPlace    String?
   contacts      Dial[]
-  createdAt     DateTime       @default(now())
+  createdAt     DateTime         @default(now())
   domiciliation Domiciliation?
   email         String
-  id            String         @id @default(cuid())
-  relocation    Transfer?      @relation(fields: [relocationId], references: [id])
-  relocationId  String?        @unique
-  structure     Structure?     @relation(fields: [structureId], references: [id])
+  firstName     String
+  id            Int              @id @default(autoincrement())
+  lastName      String
+  names         String?
+  nationality   String?
+  relocation    Transfer?        @relation(fields: [relocationId], references: [id])
+  relocationId  String?          @unique
+  sex           EnumEmployeeSex?
+  structure     Structure?       @relation(fields: [structureId], references: [id])
   structureId   String?
-  updatedAt     DateTime       @updatedAt
+  updatedAt     DateTime         @updatedAt
 }
 
 model Address {
+  complement         String?
+  country            String?
   createdAt          DateTime       @default(now())
   id                 String         @id @default(cuid())
+  inseeCog           String?
+  precision1         String?
+  precision_2        String?
   principalAddresses Domiciliation?
   secondaryAddresses Transfer?
+  town               String?
   updatedAt          DateTime       @updatedAt
 }
 
 model Dial {
-  createdAt  DateTime  @default(now())
-  employee   Employee? @relation(fields: [employeeId], references: [id])
-  employeeId String?
-  id         String    @id @default(cuid())
-  phone      Int
-  updatedAt  DateTime  @updatedAt
+  createdAt  DateTime     @default(now())
+  employee   Employee?    @relation(fields: [employeeId], references: [id])
+  employeeId Int?
+  id         String       @id @default(cuid())
+  kind       EnumDialKind
+  updatedAt  DateTime     @updatedAt
+  value      String
 }
 
 model Domiciliation {
@@ -61,7 +77,7 @@ model Domiciliation {
   addressId   String   @unique
   createdAt   DateTime @default(now())
   employees   Employee @relation(fields: [employeesId], references: [id])
-  employeesId String   @unique
+  employeesId Int      @unique
   id          String   @id @default(cuid())
   updatedAt   DateTime @updatedAt
 }
@@ -73,4 +89,28 @@ model Transfer {
   employee  Employee?
   id        String    @id @default(cuid())
   updatedAt DateTime  @updatedAt
+}
+
+model Orientation {
+  activity         String?
+  createdAt        DateTime @default(now())
+  geographicDomain String?
+  id               String   @id @default(cuid())
+  structureCode    String?
+  structureLabel   String?
+  updatedAt        DateTime @updatedAt
+}
+
+enum EnumEmployeeSex {
+  Homme
+  Femme
+  Inconnu
+}
+
+enum EnumDialKind {
+  TelephoneProfessionnel
+  EmailPersonnel
+  EmailProfessionnel
+  TelephoneFix
+  TelephoneMobile
 }

@@ -54,7 +54,7 @@ export class EmployeeServiceBase {
   }
 
   async findContacts(
-    parentId: string,
+    parentId: number,
     args: Prisma.DialFindManyArgs
   ): Promise<PrismaDial[]> {
     return this.prisma.employee
@@ -65,7 +65,7 @@ export class EmployeeServiceBase {
   }
 
   async getDomiciliation(
-    parentId: string
+    parentId: number
   ): Promise<PrismaDomiciliation | null> {
     return this.prisma.employee
       .findUnique({
@@ -74,7 +74,7 @@ export class EmployeeServiceBase {
       .domiciliation();
   }
 
-  async getRelocation(parentId: string): Promise<PrismaTransfer | null> {
+  async getRelocation(parentId: number): Promise<PrismaTransfer | null> {
     return this.prisma.employee
       .findUnique({
         where: { id: parentId },
@@ -82,7 +82,7 @@ export class EmployeeServiceBase {
       .relocation();
   }
 
-  async getStructure(parentId: string): Promise<PrismaStructure | null> {
+  async getStructure(parentId: number): Promise<PrismaStructure | null> {
     return this.prisma.employee
       .findUnique({
         where: { id: parentId },

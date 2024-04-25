@@ -7,6 +7,7 @@ import { AddressModule } from "./address/address.module";
 import { DialModule } from "./dial/dial.module";
 import { DomiciliationModule } from "./domiciliation/domiciliation.module";
 import { TransferModule } from "./transfer/transfer.module";
+import { OrientationModule } from "./orientation/orientation.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -32,6 +33,7 @@ import { AuthModule } from "./auth/auth.module";
     DialModule,
     DomiciliationModule,
     TransferModule,
+    OrientationModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,

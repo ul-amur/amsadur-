@@ -61,7 +61,7 @@ class DialOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  phone?: SortOrder;
+  kind?: SortOrder;
 
   @ApiProperty({
     required: false,
@@ -73,6 +73,17 @@ class DialOrderByInput {
     nullable: true,
   })
   updatedAt?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @IsOptional()
+  @IsEnum(SortOrder)
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
+  value?: SortOrder;
 }
 
 export { DialOrderByInput as DialOrderByInput };

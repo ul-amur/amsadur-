@@ -12,10 +12,10 @@ https://docs.amplication.com/how-to/custom-code
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import { EmployeeWhereUniqueInput } from "../../employee/base/EmployeeWhereUniqueInput";
-import { ValidateNested, IsOptional } from "class-validator";
+import { ValidateNested, IsOptional, IsEnum } from "class-validator";
 import { Type } from "class-transformer";
 import { StringFilter } from "../../util/StringFilter";
-import { IntFilter } from "../../util/IntFilter";
+import { EnumDialKind } from "./EnumDialKind";
 
 @InputType()
 class DialWhereInput {
@@ -44,14 +44,30 @@ class DialWhereInput {
 
   @ApiProperty({
     required: false,
-    type: IntFilter,
+    enum: EnumDialKind,
   })
-  @Type(() => IntFilter)
+  @IsEnum(EnumDialKind)
   @IsOptional()
-  @Field(() => IntFilter, {
+  @Field(() => EnumDialKind, {
     nullable: true,
   })
-  phone?: IntFilter;
+  kind?:
+    | "TelephoneProfessionnel"
+    | "EmailPersonnel"
+    | "EmailProfessionnel"
+    | "TelephoneFix"
+    | "TelephoneMobile";
+
+  @ApiProperty({
+    required: false,
+    type: StringFilter,
+  })
+  @Type(() => StringFilter)
+  @IsOptional()
+  @Field(() => StringFilter, {
+    nullable: true,
+  })
+  value?: StringFilter;
 }
 
 export { DialWhereInput as DialWhereInput };

@@ -11,15 +11,66 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { DialUpdateManyWithoutEmployeesInput } from "./DialUpdateManyWithoutEmployeesInput";
-import { ValidateNested, IsOptional, IsString } from "class-validator";
+import {
+  IsString,
+  IsOptional,
+  IsDate,
+  ValidateNested,
+  IsEnum,
+} from "class-validator";
 import { Type } from "class-transformer";
+import { DialUpdateManyWithoutEmployeesInput } from "./DialUpdateManyWithoutEmployeesInput";
 import { DomiciliationWhereUniqueInput } from "../../domiciliation/base/DomiciliationWhereUniqueInput";
 import { TransferWhereUniqueInput } from "../../transfer/base/TransferWhereUniqueInput";
+import { EnumEmployeeSex } from "./EnumEmployeeSex";
 import { StructureWhereUniqueInput } from "../../structure/base/StructureWhereUniqueInput";
 
 @InputType()
 class EmployeeUpdateInput {
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  birthCountry?: string | null;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  birthDate?: Date | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  birthName?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  birthPlace?: string | null;
+
   @ApiProperty({
     required: false,
     type: () => DialUpdateManyWithoutEmployeesInput,
@@ -57,6 +108,50 @@ class EmployeeUpdateInput {
 
   @ApiProperty({
     required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  firstName?: string;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  lastName?: string;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  names?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  nationality?: string | null;
+
+  @ApiProperty({
+    required: false,
     type: () => TransferWhereUniqueInput,
   })
   @ValidateNested()
@@ -66,6 +161,17 @@ class EmployeeUpdateInput {
     nullable: true,
   })
   relocation?: TransferWhereUniqueInput | null;
+
+  @ApiProperty({
+    required: false,
+    enum: EnumEmployeeSex,
+  })
+  @IsEnum(EnumEmployeeSex)
+  @IsOptional()
+  @Field(() => EnumEmployeeSex, {
+    nullable: true,
+  })
+  sex?: "Homme" | "Femme" | "Inconnu" | null;
 
   @ApiProperty({
     required: false,

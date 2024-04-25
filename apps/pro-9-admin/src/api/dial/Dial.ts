@@ -4,6 +4,12 @@ export type Dial = {
   createdAt: Date;
   employee?: Employee | null;
   id: string;
-  phone: number;
+  kind?:
+    | "TelephoneProfessionnel"
+    | "EmailPersonnel"
+    | "EmailProfessionnel"
+    | "TelephoneFix"
+    | "TelephoneMobile";
   updatedAt: Date;
+  value: string;
 };

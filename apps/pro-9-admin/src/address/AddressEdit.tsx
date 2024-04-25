@@ -3,6 +3,7 @@ import {
   Edit,
   SimpleForm,
   EditProps,
+  TextInput,
   ReferenceInput,
   SelectInput,
 } from "react-admin";
@@ -13,6 +14,11 @@ export const AddressEdit = (props: EditProps): React.ReactElement => {
   return (
     <Edit {...props}>
       <SimpleForm>
+        <TextInput label="Complement" source="complement" />
+        <TextInput label="Country" source="country" />
+        <TextInput label="Insee Cog" source="inseeCog" />
+        <TextInput label="Precision 1" source="precision1" />
+        <TextInput label="Precision 2" source="precision_2" />
         <ReferenceInput
           source="principalAddresses.id"
           reference="Domiciliation"
@@ -27,6 +33,7 @@ export const AddressEdit = (props: EditProps): React.ReactElement => {
         >
           <SelectInput optionText={TransferTitle} />
         </ReferenceInput>
+        <TextInput label="Town" source="town" />
       </SimpleForm>
     </Edit>
   );

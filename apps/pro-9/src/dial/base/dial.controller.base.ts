@@ -69,8 +69,9 @@ export class DialControllerBase {
         },
 
         id: true,
-        phone: true,
+        kind: true,
         updatedAt: true,
+        value: true,
       },
     });
   }
@@ -101,8 +102,9 @@ export class DialControllerBase {
         },
 
         id: true,
-        phone: true,
+        kind: true,
         updatedAt: true,
+        value: true,
       },
     });
   }
@@ -134,8 +136,9 @@ export class DialControllerBase {
         },
 
         id: true,
-        phone: true,
+        kind: true,
         updatedAt: true,
+        value: true,
       },
     });
     if (result === null) {
@@ -187,8 +190,9 @@ export class DialControllerBase {
           },
 
           id: true,
-          phone: true,
+          kind: true,
           updatedAt: true,
+          value: true,
         },
       });
     } catch (error) {
@@ -228,8 +232,9 @@ export class DialControllerBase {
           },
 
           id: true,
-          phone: true,
+          kind: true,
           updatedAt: true,
+          value: true,
         },
       });
     } catch (error) {
