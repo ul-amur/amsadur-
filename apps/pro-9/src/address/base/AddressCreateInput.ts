@@ -11,13 +11,68 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
+import { IsString, IsOptional, ValidateNested } from "class-validator";
 import { DomiciliationWhereUniqueInput } from "../../domiciliation/base/DomiciliationWhereUniqueInput";
-import { ValidateNested, IsOptional } from "class-validator";
 import { Type } from "class-transformer";
 import { TransferWhereUniqueInput } from "../../transfer/base/TransferWhereUniqueInput";
 
 @InputType()
 class AddressCreateInput {
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  complement?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  country?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  inseeCog?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  precision1?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  precision_2?: string | null;
+
   @ApiProperty({
     required: false,
     type: () => DomiciliationWhereUniqueInput,
@@ -41,6 +96,17 @@ class AddressCreateInput {
     nullable: true,
   })
   secondaryAddresses?: TransferWhereUniqueInput | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  town?: string | null;
 }
 
 export { AddressCreateInput as AddressCreateInput };

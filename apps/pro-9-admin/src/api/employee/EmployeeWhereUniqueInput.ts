@@ -1,3 +1,3 @@
 export type EmployeeWhereUniqueInput = {
-  id: string;
+  id: number;
 };

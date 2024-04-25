@@ -12,8 +12,9 @@ https://docs.amplication.com/how-to/custom-code
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import { EmployeeWhereUniqueInput } from "../../employee/base/EmployeeWhereUniqueInput";
-import { ValidateNested, IsOptional, IsInt } from "class-validator";
+import { ValidateNested, IsOptional, IsEnum, IsString } from "class-validator";
 import { Type } from "class-transformer";
+import { EnumDialKind } from "./EnumDialKind";
 
 @InputType()
 class DialUpdateInput {
@@ -31,14 +32,30 @@ class DialUpdateInput {
 
   @ApiProperty({
     required: false,
-    type: Number,
+    enum: EnumDialKind,
   })
-  @IsInt()
+  @IsEnum(EnumDialKind)
   @IsOptional()
-  @Field(() => Number, {
+  @Field(() => EnumDialKind, {
     nullable: true,
   })
-  phone?: number;
+  kind?:
+    | "TelephoneProfessionnel"
+    | "EmailPersonnel"
+    | "EmailProfessionnel"
+    | "TelephoneFix"
+    | "TelephoneMobile";
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  value?: string;
 }
 
 export { DialUpdateInput as DialUpdateInput };

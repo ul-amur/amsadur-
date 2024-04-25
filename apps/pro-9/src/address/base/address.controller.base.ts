@@ -68,8 +68,13 @@ export class AddressControllerBase {
           : undefined,
       },
       select: {
+        complement: true,
+        country: true,
         createdAt: true,
         id: true,
+        inseeCog: true,
+        precision1: true,
+        precision_2: true,
 
         principalAddresses: {
           select: {
@@ -83,6 +88,7 @@ export class AddressControllerBase {
           },
         },
 
+        town: true,
         updatedAt: true,
       },
     });
@@ -105,8 +111,13 @@ export class AddressControllerBase {
     return this.service.addresses({
       ...args,
       select: {
+        complement: true,
+        country: true,
         createdAt: true,
         id: true,
+        inseeCog: true,
+        precision1: true,
+        precision_2: true,
 
         principalAddresses: {
           select: {
@@ -120,6 +131,7 @@ export class AddressControllerBase {
           },
         },
 
+        town: true,
         updatedAt: true,
       },
     });
@@ -143,8 +155,13 @@ export class AddressControllerBase {
     const result = await this.service.address({
       where: params,
       select: {
+        complement: true,
+        country: true,
         createdAt: true,
         id: true,
+        inseeCog: true,
+        precision1: true,
+        precision_2: true,
 
         principalAddresses: {
           select: {
@@ -158,6 +175,7 @@ export class AddressControllerBase {
           },
         },
 
+        town: true,
         updatedAt: true,
       },
     });
@@ -207,8 +225,13 @@ export class AddressControllerBase {
             : undefined,
         },
         select: {
+          complement: true,
+          country: true,
           createdAt: true,
           id: true,
+          inseeCog: true,
+          precision1: true,
+          precision_2: true,
 
           principalAddresses: {
             select: {
@@ -222,6 +245,7 @@ export class AddressControllerBase {
             },
           },
 
+          town: true,
           updatedAt: true,
         },
       });
@@ -253,8 +277,13 @@ export class AddressControllerBase {
       return await this.service.deleteAddress({
         where: params,
         select: {
+          complement: true,
+          country: true,
           createdAt: true,
           id: true,
+          inseeCog: true,
+          precision1: true,
+          precision_2: true,
 
           principalAddresses: {
             select: {
@@ -268,6 +297,7 @@ export class AddressControllerBase {
             },
           },
 
+          town: true,
           updatedAt: true,
         },
       });

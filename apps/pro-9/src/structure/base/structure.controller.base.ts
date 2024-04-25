@@ -207,6 +207,10 @@ export class StructureControllerBase {
     const results = await this.service.findEmployees(params.id, {
       ...query,
       select: {
+        birthCountry: true,
+        birthDate: true,
+        birthName: true,
+        birthPlace: true,
         createdAt: true,
 
         domiciliation: {
@@ -216,13 +220,19 @@ export class StructureControllerBase {
         },
 
         email: true,
+        firstName: true,
         id: true,
+        lastName: true,
+        names: true,
+        nationality: true,
 
         relocation: {
           select: {
             id: true,
           },
         },
+
+        sex: true,
 
         structure: {
           select: {

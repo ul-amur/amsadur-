@@ -18,29 +18,61 @@ import { EmployeeService } from "../employee.service";
 const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
+  birthCountry: "exampleBirthCountry",
+  birthDate: new Date(),
+  birthName: "exampleBirthName",
+  birthPlace: "exampleBirthPlace",
   createdAt: new Date(),
   email: "exampleEmail",
-  id: "exampleId",
+  firstName: "exampleFirstName",
+  id: 42,
+  lastName: "exampleLastName",
+  names: "exampleNames",
+  nationality: "exampleNationality",
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
+  birthCountry: "exampleBirthCountry",
+  birthDate: new Date(),
+  birthName: "exampleBirthName",
+  birthPlace: "exampleBirthPlace",
   createdAt: new Date(),
   email: "exampleEmail",
-  id: "exampleId",
+  firstName: "exampleFirstName",
+  id: 42,
+  lastName: "exampleLastName",
+  names: "exampleNames",
+  nationality: "exampleNationality",
   updatedAt: new Date(),
 };
 const FIND_MANY_RESULT = [
   {
+    birthCountry: "exampleBirthCountry",
+    birthDate: new Date(),
+    birthName: "exampleBirthName",
+    birthPlace: "exampleBirthPlace",
     createdAt: new Date(),
     email: "exampleEmail",
-    id: "exampleId",
+    firstName: "exampleFirstName",
+    id: 42,
+    lastName: "exampleLastName",
+    names: "exampleNames",
+    nationality: "exampleNationality",
     updatedAt: new Date(),
   },
 ];
 const FIND_ONE_RESULT = {
+  birthCountry: "exampleBirthCountry",
+  birthDate: new Date(),
+  birthName: "exampleBirthName",
+  birthPlace: "exampleBirthPlace",
   createdAt: new Date(),
   email: "exampleEmail",
-  id: "exampleId",
+  firstName: "exampleFirstName",
+  id: 42,
+  lastName: "exampleLastName",
+  names: "exampleNames",
+  nationality: "exampleNationality",
   updatedAt: new Date(),
 };
 
@@ -126,6 +158,7 @@ describe("Employee", () => {
       .expect(HttpStatus.CREATED)
       .expect({
         ...CREATE_RESULT,
+        birthDate: CREATE_RESULT.birthDate.toISOString(),
         createdAt: CREATE_RESULT.createdAt.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       });
@@ -138,6 +171,7 @@ describe("Employee", () => {
       .expect([
         {
           ...FIND_MANY_RESULT[0],
+          birthDate: FIND_MANY_RESULT[0].birthDate.toISOString(),
           createdAt: FIND_MANY_RESULT[0].createdAt.toISOString(),
           updatedAt: FIND_MANY_RESULT[0].updatedAt.toISOString(),
         },
@@ -161,6 +195,7 @@ describe("Employee", () => {
       .expect(HttpStatus.OK)
       .expect({
         ...FIND_ONE_RESULT,
+        birthDate: FIND_ONE_RESULT.birthDate.toISOString(),
         createdAt: FIND_ONE_RESULT.createdAt.toISOString(),
         updatedAt: FIND_ONE_RESULT.updatedAt.toISOString(),
       });
@@ -174,6 +209,7 @@ describe("Employee", () => {
       .expect(HttpStatus.CREATED)
       .expect({
         ...CREATE_RESULT,
+        birthDate: CREATE_RESULT.birthDate.toISOString(),
         createdAt: CREATE_RESULT.createdAt.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       })

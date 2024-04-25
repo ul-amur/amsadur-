@@ -77,6 +77,10 @@ export class EmployeeControllerBase {
           : undefined,
       },
       select: {
+        birthCountry: true,
+        birthDate: true,
+        birthName: true,
+        birthPlace: true,
         createdAt: true,
 
         domiciliation: {
@@ -86,13 +90,19 @@ export class EmployeeControllerBase {
         },
 
         email: true,
+        firstName: true,
         id: true,
+        lastName: true,
+        names: true,
+        nationality: true,
 
         relocation: {
           select: {
             id: true,
           },
         },
+
+        sex: true,
 
         structure: {
           select: {
@@ -122,6 +132,10 @@ export class EmployeeControllerBase {
     return this.service.employees({
       ...args,
       select: {
+        birthCountry: true,
+        birthDate: true,
+        birthName: true,
+        birthPlace: true,
         createdAt: true,
 
         domiciliation: {
@@ -131,13 +145,19 @@ export class EmployeeControllerBase {
         },
 
         email: true,
+        firstName: true,
         id: true,
+        lastName: true,
+        names: true,
+        nationality: true,
 
         relocation: {
           select: {
             id: true,
           },
         },
+
+        sex: true,
 
         structure: {
           select: {
@@ -168,6 +188,10 @@ export class EmployeeControllerBase {
     const result = await this.service.employee({
       where: params,
       select: {
+        birthCountry: true,
+        birthDate: true,
+        birthName: true,
+        birthPlace: true,
         createdAt: true,
 
         domiciliation: {
@@ -177,13 +201,19 @@ export class EmployeeControllerBase {
         },
 
         email: true,
+        firstName: true,
         id: true,
+        lastName: true,
+        names: true,
+        nationality: true,
 
         relocation: {
           select: {
             id: true,
           },
         },
+
+        sex: true,
 
         structure: {
           select: {
@@ -246,6 +276,10 @@ export class EmployeeControllerBase {
             : undefined,
         },
         select: {
+          birthCountry: true,
+          birthDate: true,
+          birthName: true,
+          birthPlace: true,
           createdAt: true,
 
           domiciliation: {
@@ -255,13 +289,19 @@ export class EmployeeControllerBase {
           },
 
           email: true,
+          firstName: true,
           id: true,
+          lastName: true,
+          names: true,
+          nationality: true,
 
           relocation: {
             select: {
               id: true,
             },
           },
+
+          sex: true,
 
           structure: {
             select: {
@@ -300,6 +340,10 @@ export class EmployeeControllerBase {
       return await this.service.deleteEmployee({
         where: params,
         select: {
+          birthCountry: true,
+          birthDate: true,
+          birthName: true,
+          birthPlace: true,
           createdAt: true,
 
           domiciliation: {
@@ -309,13 +353,19 @@ export class EmployeeControllerBase {
           },
 
           email: true,
+          firstName: true,
           id: true,
+          lastName: true,
+          names: true,
+          nationality: true,
 
           relocation: {
             select: {
               id: true,
             },
           },
+
+          sex: true,
 
           structure: {
             select: {
@@ -361,8 +411,9 @@ export class EmployeeControllerBase {
         },
 
         id: true,
-        phone: true,
+        kind: true,
         updatedAt: true,
+        value: true,
       },
     });
     if (results === null) {

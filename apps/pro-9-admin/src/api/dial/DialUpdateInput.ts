@@ -2,5 +2,11 @@ import { EmployeeWhereUniqueInput } from "../employee/EmployeeWhereUniqueInput";
 
 export type DialUpdateInput = {
   employee?: EmployeeWhereUniqueInput | null;
-  phone?: number;
+  kind?:
+    | "TelephoneProfessionnel"
+    | "EmailPersonnel"
+    | "EmailProfessionnel"
+    | "TelephoneFix"
+    | "TelephoneMobile";
+  value?: string;
 };

@@ -4,6 +4,7 @@ export type DialOrderByInput = {
   createdAt?: SortOrder;
   employeeId?: SortOrder;
   id?: SortOrder;
-  phone?: SortOrder;
+  kind?: SortOrder;
   updatedAt?: SortOrder;
+  value?: SortOrder;
 };

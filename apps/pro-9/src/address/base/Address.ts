@@ -11,13 +11,35 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsDate, IsString, ValidateNested, IsOptional } from "class-validator";
+import { IsString, IsOptional, IsDate, ValidateNested } from "class-validator";
 import { Type } from "class-transformer";
 import { Domiciliation } from "../../domiciliation/base/Domiciliation";
 import { Transfer } from "../../transfer/base/Transfer";
 
 @ObjectType()
 class Address {
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  complement!: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  country!: string | null;
+
   @ApiProperty({
     required: true,
   })
@@ -36,6 +58,39 @@ class Address {
 
   @ApiProperty({
     required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  inseeCog!: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  precision1!: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  precision_2!: string | null;
+
+  @ApiProperty({
+    required: false,
     type: () => Domiciliation,
   })
   @ValidateNested()
@@ -51,6 +106,17 @@ class Address {
   @Type(() => Transfer)
   @IsOptional()
   secondaryAddresses?: Transfer | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  town!: string | null;
 
   @ApiProperty({
     required: true,

@@ -11,16 +11,64 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { DialListRelationFilter } from "../../dial/base/DialListRelationFilter";
-import { ValidateNested, IsOptional } from "class-validator";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { Type } from "class-transformer";
+import { IsOptional, ValidateNested, IsEnum } from "class-validator";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
+import { DialListRelationFilter } from "../../dial/base/DialListRelationFilter";
 import { DomiciliationWhereUniqueInput } from "../../domiciliation/base/DomiciliationWhereUniqueInput";
 import { StringFilter } from "../../util/StringFilter";
+import { IntFilter } from "../../util/IntFilter";
 import { TransferWhereUniqueInput } from "../../transfer/base/TransferWhereUniqueInput";
+import { EnumEmployeeSex } from "./EnumEmployeeSex";
 import { StructureWhereUniqueInput } from "../../structure/base/StructureWhereUniqueInput";
 
 @InputType()
 class EmployeeWhereInput {
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  birthCountry?: StringNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: DateTimeNullableFilter,
+  })
+  @Type(() => DateTimeNullableFilter)
+  @IsOptional()
+  @Field(() => DateTimeNullableFilter, {
+    nullable: true,
+  })
+  birthDate?: DateTimeNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  birthName?: StringNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  birthPlace?: StringNullableFilter;
+
   @ApiProperty({
     required: false,
     type: () => DialListRelationFilter,
@@ -65,7 +113,51 @@ class EmployeeWhereInput {
   @Field(() => StringFilter, {
     nullable: true,
   })
-  id?: StringFilter;
+  firstName?: StringFilter;
+
+  @ApiProperty({
+    required: false,
+    type: IntFilter,
+  })
+  @Type(() => IntFilter)
+  @IsOptional()
+  @Field(() => IntFilter, {
+    nullable: true,
+  })
+  id?: IntFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringFilter,
+  })
+  @Type(() => StringFilter)
+  @IsOptional()
+  @Field(() => StringFilter, {
+    nullable: true,
+  })
+  lastName?: StringFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  names?: StringNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  nationality?: StringNullableFilter;
 
   @ApiProperty({
     required: false,
@@ -78,6 +170,17 @@ class EmployeeWhereInput {
     nullable: true,
   })
   relocation?: TransferWhereUniqueInput;
+
+  @ApiProperty({
+    required: false,
+    enum: EnumEmployeeSex,
+  })
+  @IsEnum(EnumEmployeeSex)
+  @IsOptional()
+  @Field(() => EnumEmployeeSex, {
+    nullable: true,
+  })
+  sex?: "Homme" | "Femme" | "Inconnu";
 
   @ApiProperty({
     required: false,

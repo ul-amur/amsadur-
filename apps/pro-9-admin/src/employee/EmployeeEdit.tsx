@@ -4,11 +4,12 @@ import {
   Edit,
   SimpleForm,
   EditProps,
+  TextInput,
+  DateTimeInput,
   ReferenceArrayInput,
   SelectArrayInput,
   ReferenceInput,
   SelectInput,
-  TextInput,
 } from "react-admin";
 
 import { DialTitle } from "../dial/DialTitle";
@@ -20,6 +21,10 @@ export const EmployeeEdit = (props: EditProps): React.ReactElement => {
   return (
     <Edit {...props}>
       <SimpleForm>
+        <TextInput label="Birth Country" source="birthCountry" />
+        <DateTimeInput label="Birth Date" source="birthDate" />
+        <TextInput label="Birth Name" source="birthName" />
+        <TextInput label="Birth Place" source="birthPlace" />
         <ReferenceArrayInput
           source="contacts"
           reference="Dial"
@@ -36,6 +41,10 @@ export const EmployeeEdit = (props: EditProps): React.ReactElement => {
           <SelectInput optionText={DomiciliationTitle} />
         </ReferenceInput>
         <TextInput label="Email" source="email" type="email" />
+        <TextInput label="First Name" source="firstName" />
+        <TextInput label="Last Name" source="lastName" />
+        <TextInput label="Names" source="names" />
+        <TextInput label="Nationality" source="nationality" />
         <ReferenceInput
           source="relocation.id"
           reference="Transfer"
@@ -43,6 +52,18 @@ export const EmployeeEdit = (props: EditProps): React.ReactElement => {
         >
           <SelectInput optionText={TransferTitle} />
         </ReferenceInput>
+        <SelectInput
+          source="sex"
+          label="Sex"
+          choices={[
+            { label: "Homme", value: "Homme" },
+            { label: "Femme", value: "Femme" },
+            { label: "Inconnu", value: "Inconnu" },
+          ]}
+          optionText="label"
+          allowEmpty
+          optionValue="value"
+        />
         <ReferenceInput
           source="structure.id"
           reference="Structure"

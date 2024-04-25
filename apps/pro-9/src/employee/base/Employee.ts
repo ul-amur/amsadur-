@@ -11,15 +11,67 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { Dial } from "../../dial/base/Dial";
-import { ValidateNested, IsOptional, IsDate, IsString } from "class-validator";
+import {
+  IsString,
+  IsOptional,
+  IsDate,
+  ValidateNested,
+  IsInt,
+  IsEnum,
+} from "class-validator";
 import { Type } from "class-transformer";
+import { Dial } from "../../dial/base/Dial";
 import { Domiciliation } from "../../domiciliation/base/Domiciliation";
 import { Transfer } from "../../transfer/base/Transfer";
+import { EnumEmployeeSex } from "./EnumEmployeeSex";
 import { Structure } from "../../structure/base/Structure";
 
 @ObjectType()
 class Employee {
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  birthCountry!: string | null;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  birthDate!: Date | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  birthName!: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  birthPlace!: string | null;
+
   @ApiProperty({
     required: true,
     type: () => [Dial],
@@ -60,7 +112,45 @@ class Employee {
   })
   @IsString()
   @Field(() => String)
-  id!: string;
+  firstName!: string;
+
+  @ApiProperty({
+    required: true,
+    type: Number,
+  })
+  @IsInt()
+  @Field(() => Number)
+  id!: number;
+
+  @ApiProperty({
+    required: true,
+    type: String,
+  })
+  @IsString()
+  @Field(() => String)
+  lastName!: string;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  names!: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  nationality!: string | null;
 
   @ApiProperty({
     required: false,
@@ -70,6 +160,17 @@ class Employee {
   @Type(() => Transfer)
   @IsOptional()
   relocation?: Transfer | null;
+
+  @ApiProperty({
+    required: false,
+    enum: EnumEmployeeSex,
+  })
+  @IsEnum(EnumEmployeeSex)
+  @IsOptional()
+  @Field(() => EnumEmployeeSex, {
+    nullable: true,
+  })
+  sex?: "Homme" | "Femme" | "Inconnu" | null;
 
   @ApiProperty({
     required: false,

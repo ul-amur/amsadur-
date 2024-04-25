@@ -3,8 +3,8 @@ import {
   Show,
   SimpleShowLayout,
   ShowProps,
-  DateField,
   TextField,
+  DateField,
   ReferenceField,
 } from "react-admin";
 import { DOMICILIATION_TITLE_FIELD } from "../domiciliation/DomiciliationTitle";
@@ -14,8 +14,13 @@ export const AddressShow = (props: ShowProps): React.ReactElement => {
   return (
     <Show {...props}>
       <SimpleShowLayout>
+        <TextField label="Complement" source="complement" />
+        <TextField label="Country" source="country" />
         <DateField source="createdAt" label="Created At" />
         <TextField label="ID" source="id" />
+        <TextField label="Insee Cog" source="inseeCog" />
+        <TextField label="Precision 1" source="precision1" />
+        <TextField label="Precision 2" source="precision_2" />
         <ReferenceField
           label="Principal Address"
           source="domiciliation.id"
@@ -30,6 +35,7 @@ export const AddressShow = (props: ShowProps): React.ReactElement => {
         >
           <TextField source={TRANSFER_TITLE_FIELD} />
         </ReferenceField>
+        <TextField label="Town" source="town" />
         <DateField source="updatedAt" label="Updated At" />
       </SimpleShowLayout>
     </Show>

@@ -38,6 +38,10 @@ import { TransferList } from "./transfer/TransferList";
 import { TransferCreate } from "./transfer/TransferCreate";
 import { TransferEdit } from "./transfer/TransferEdit";
 import { TransferShow } from "./transfer/TransferShow";
+import { OrientationList } from "./orientation/OrientationList";
+import { OrientationCreate } from "./orientation/OrientationCreate";
+import { OrientationEdit } from "./orientation/OrientationEdit";
+import { OrientationShow } from "./orientation/OrientationShow";
 
 const App = (): React.ReactElement => {
   const [dataProvider, setDataProvider] = useState<DataProvider | null>(null);
@@ -129,6 +133,13 @@ const App = (): React.ReactElement => {
           edit={TransferEdit}
           create={TransferCreate}
           show={TransferShow}
+        />
+        <Resource
+          name="Orientation"
+          list={OrientationList}
+          edit={OrientationEdit}
+          create={OrientationCreate}
+          show={OrientationShow}
         />
       </Admin>
     </div>

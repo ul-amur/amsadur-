@@ -1048,5 +1048,155 @@
     "resource": "Transfer",
     "action": "read:any",
     "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Orientation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Orientation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Orientation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Orientation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Orientation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Orientation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Orientation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Orientation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Orientation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Orientation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Orientation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Orientation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Orientation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Orientation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Orientation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Orientation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Orientation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Orientation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Orientation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Orientation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Orientation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Orientation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Orientation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Orientation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Orientation",
+    "action": "read:any",
+    "attributes": "*"
   }
 ]

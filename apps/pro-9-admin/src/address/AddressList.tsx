@@ -3,8 +3,8 @@ import {
   List,
   Datagrid,
   ListProps,
-  DateField,
   TextField,
+  DateField,
   ReferenceField,
 } from "react-admin";
 import Pagination from "../Components/Pagination";
@@ -21,8 +21,13 @@ export const AddressList = (props: ListProps): React.ReactElement => {
       pagination={<Pagination />}
     >
       <Datagrid rowClick="show">
+        <TextField label="Complement" source="complement" />
+        <TextField label="Country" source="country" />
         <DateField source="createdAt" label="Created At" />
         <TextField label="ID" source="id" />
+        <TextField label="Insee Cog" source="inseeCog" />
+        <TextField label="Precision 1" source="precision1" />
+        <TextField label="Precision 2" source="precision_2" />
         <ReferenceField
           label="Principal Address"
           source="domiciliation.id"
@@ -37,6 +42,7 @@ export const AddressList = (props: ListProps): React.ReactElement => {
         >
           <TextField source={TRANSFER_TITLE_FIELD} />
         </ReferenceField>
+        <TextField label="Town" source="town" />
         <DateField source="updatedAt" label="Updated At" />
       </Datagrid>
     </List>

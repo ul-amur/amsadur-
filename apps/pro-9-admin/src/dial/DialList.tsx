@@ -29,8 +29,9 @@ export const DialList = (props: ListProps): React.ReactElement => {
           <TextField source={EMPLOYEE_TITLE_FIELD} />
         </ReferenceField>
         <TextField label="ID" source="id" />
-        <TextField label="Phone" source="phone" />
+        <TextField label="Kind" source="kind" />
         <DateField source="updatedAt" label="Updated At" />
+        <TextField label="Value" source="value" />
       </Datagrid>
     </List>
   );
