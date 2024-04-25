@@ -1,0 +1,1052 @@
+[
+  {
+    "role": "Administrator",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Structure",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Structure",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Structure",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Structure",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Structure",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Structure",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Structure",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Structure",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Structure",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Structure",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Structure",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Structure",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Structure",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Structure",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Structure",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Structure",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Structure",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Structure",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Structure",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Structure",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Structure",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Structure",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Structure",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Structure",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Structure",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Employee",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Employee",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Employee",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Employee",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Employee",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Employee",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Employee",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Employee",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Employee",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Employee",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Employee",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Employee",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Employee",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Employee",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Employee",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Employee",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Employee",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Employee",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Employee",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Employee",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Employee",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Employee",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Employee",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Employee",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Employee",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Address",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Address",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Address",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Address",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Address",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Address",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Address",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Address",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Address",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Address",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Address",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Address",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Address",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Address",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Address",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Address",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Address",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Address",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Address",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Address",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Address",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Address",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Address",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Address",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Address",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Dial",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Dial",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Dial",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Dial",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Dial",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Dial",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Dial",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Dial",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Dial",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Dial",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Dial",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Dial",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Dial",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Dial",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Dial",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Dial",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Dial",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Dial",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Dial",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Dial",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Dial",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Dial",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Dial",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Dial",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Dial",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Domiciliation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Domiciliation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Domiciliation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Domiciliation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Domiciliation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Domiciliation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Domiciliation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Domiciliation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Domiciliation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Domiciliation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Domiciliation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Domiciliation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Domiciliation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Domiciliation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Domiciliation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Domiciliation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Domiciliation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Domiciliation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Domiciliation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Domiciliation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Domiciliation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Domiciliation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Domiciliation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Domiciliation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Domiciliation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Transfer",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Transfer",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Transfer",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Transfer",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Transfer",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Transfer",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Transfer",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Transfer",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Transfer",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Transfer",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Transfer",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Transfer",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Transfer",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Transfer",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Transfer",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Transfer",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Transfer",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Transfer",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Transfer",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Transfer",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Administrator",
+    "resource": "Transfer",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "association",
+    "resource": "Transfer",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "federation",
+    "resource": "Transfer",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "Manager",
+    "resource": "Transfer",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Transfer",
+    "action": "read:any",
+    "attributes": "*"
+  }
+]

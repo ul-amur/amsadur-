@@ -1,0 +1,76 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  createdAt DateTime @default(now())
+  email     String?  @unique
+  firstName String?
+  id        String   @id @default(cuid())
+  lastName  String?
+  password  String
+  roles     Json
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+}
+
+model Structure {
+  createdAt DateTime   @default(now())
+  employees Employee[]
+  id        String     @id @default(cuid())
+  updatedAt DateTime   @updatedAt
+}
+
+model Employee {
+  contacts      Dial[]
+  createdAt     DateTime       @default(now())
+  domiciliation Domiciliation?
+  email         String
+  id            String         @id @default(cuid())
+  relocation    Transfer?      @relation(fields: [relocationId], references: [id])
+  relocationId  String?        @unique
+  structure     Structure?     @relation(fields: [structureId], references: [id])
+  structureId   String?
+  updatedAt     DateTime       @updatedAt
+}
+
+model Address {
+  createdAt          DateTime       @default(now())
+  id                 String         @id @default(cuid())
+  principalAddresses Domiciliation?
+  secondaryAddresses Transfer?
+  updatedAt          DateTime       @updatedAt
+}
+
+model Dial {
+  createdAt  DateTime  @default(now())
+  employee   Employee? @relation(fields: [employeeId], references: [id])
+  employeeId String?
+  id         String    @id @default(cuid())
+  phone      Int
+  updatedAt  DateTime  @updatedAt
+}
+
+model Domiciliation {
+  address     Address  @relation(fields: [addressId], references: [id])
+  addressId   String   @unique
+  createdAt   DateTime @default(now())
+  employees   Employee @relation(fields: [employeesId], references: [id])
+  employeesId String   @unique
+  id          String   @id @default(cuid())
+  updatedAt   DateTime @updatedAt
+}
+
+model Transfer {
+  address   Address?  @relation(fields: [addressId], references: [id])
+  addressId String?   @unique
+  createdAt DateTime  @default(now())
+  employee  Employee?
+  id        String    @id @default(cuid())
+  updatedAt DateTime  @updatedAt
+}
